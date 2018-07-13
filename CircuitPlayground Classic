@@ -7,8 +7,8 @@
 #include <Keyboard.h>
 #include <Adafruit_CircuitPlayground.h>// Only with adafruit CircuitPlayground
 #define purple  0xcc33ff // Only with adafruit CircuitPlayground
-#include "Mouse.h"//Optional
-const int leftButton ; 
+#include <Mouse.h> //Optional
+
 
 void setup(){
   while (!Serial);
@@ -29,10 +29,9 @@ void loop() {
     Keyboard.release(KEY_F5);//depress F5
     delay (2);
     Mouse.press(MOUSE_LEFT);//Mouse click ( optional)
-    delay(5);
-    Mouse.release(MOUSE_LEFT);//Mouse release ( Optional)
     delay (2);
-    delay (50);
+    Mouse.release(MOUSE_LEFT);//Mouse release ( Optional)
+    delay (52);
     CircuitPlayground.clearPixels();// clear the pixels
 delay (600000); // Delay 10 mins
    } }
