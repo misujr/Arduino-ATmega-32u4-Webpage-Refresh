@@ -1,0 +1,28 @@
+//Arduino Code for Adafruit CircuitPLayground Classic
+//Arduino-ATmega-32u4-Webpage-Refresh
+// by Misujr
+//July 2018
+// MIT Licence
+
+#include <Keyboard.h>
+#include <Mouse.h> //Optional
+
+void setup(){
+  while (!Serial);
+   Serial.begin(9600);
+  Serial.println("Keyboard-F5 button refresh gadget");
+  Keyboard.begin();
+  Mouse.begin(); //Optional
+} 
+void loop() {
+Serial.println("Loop Start");// visual check over tty
+    delay (2);
+    Keyboard.press(KEY_F5);//press F5
+    delay (2);
+    Keyboard.release(KEY_F5);//depress F5
+    delay (2);
+    Mouse.press(MOUSE_LEFT);//Mouse click ( optional)
+    delay (2);
+    Mouse.release(MOUSE_LEFT);//Mouse release ( Optional)
+    delay (50);
+}
