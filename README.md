@@ -7,5 +7,5 @@ A small bit of code to help you refresh a web page by simulating the F5 keyboard
 This is useful in many situations and I hope it will help you when you need to refresh a page to keep a page updated or simply trying to stop your computer from going to sleep . 
 
 
-BR,
+BR,<br>
 Misujr
